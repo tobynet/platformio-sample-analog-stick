@@ -1,9 +1,11 @@
 #include <Arduino.h>
+#include "sample_led.h"
 
 void setup() {
-    // put your setup code here, to run once:
+    sample_led_setup();
 }
 
+
 void loop() {
-    // put your main code here, to run repeatedly:
+    sample_led_loop();
 }
