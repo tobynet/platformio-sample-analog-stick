@@ -4,10 +4,10 @@
 const int StickThreshold = 10;
 const int StickCenterThreshold = 10;
 
-const int centerX = 512;
-const int centerY = centerX;
-const int maxX = 1023;
-const int maxY = maxX;
+const int CenterX = 512;
+const int CenterY = CenterX;
+const int MaxX = 1023;
+const int MaxY = MaxX;
 
 const int MaxButtonCount = 255;
 
