@@ -6,16 +6,23 @@ const int XPin = A0;
 const int YPin = A1;
 const int ButtonPin = 15;
 
-const int DelayTime = 1000 / 120;
+const int DelayTime = 1000 / 100;
 
+#define print_val(x) Serial.print(#x ": "); Serial.println(x);
 
 AnalogStick stick;
+
+void print_debug() {
+    Serial.print("  "); print_val(XPin);
+    Serial.print("  "); print_val(YPin);
+}
 
 void setup() {
     stick.setup(XPin, YPin, ButtonPin);
 
     Serial.begin(9600);
 }
+
 
 
 void loop() {
@@ -34,6 +41,7 @@ void loop() {
     if (stick.is_button_pressed()) {
         Serial.print("Button: PRESSED! ");
         stick.show_positions();
+        print_debug();
     }
     // ボタン離したチェック
     if (stick.is_button_upped()) {
